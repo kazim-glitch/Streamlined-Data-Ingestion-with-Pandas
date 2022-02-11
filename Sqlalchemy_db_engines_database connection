@@ -1,0 +1,16 @@
+from sqlalchemy import create_engine
+
+
+engine = create_engine('sqlite:///data.db') # link to the the databse
+
+#loading tables from a database
+
+table = pd.read_sql("table_name",engine)
+
+sql_query = '''
+select * from table where
+
+'''
+query_result = pd.read_sql(sql_query,engine)
+
+
