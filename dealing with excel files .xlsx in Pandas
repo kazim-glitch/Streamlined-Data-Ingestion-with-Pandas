@@ -1,0 +1,26 @@
+#Excel may contain multiple sheets and sometimes you may have to deal with each of the files or all of the files at once 
+
+import pandas as pd
+
+data = pd.read_excel("file.xlsx",sheet_name=number(index) of the file in Excel)
+
+#laod specific xlsx files in pandas by mentioning their names an making a list and passing as a argument in sheet_names
+
+list = ["sheet1","sheet1"]
+
+data = pd.read_excel("file.xlsx",sheet_name=list)
+
+
+# Count NA values in each column
+
+print(data.isna().sum())
+
+#parsing date columns in pandas datetime format
+
+
+data = pd.read_excel("file.xlsx",
+                            parse_dates=["coulumn_name"])
+
+pd.to_datetime()
+
+
