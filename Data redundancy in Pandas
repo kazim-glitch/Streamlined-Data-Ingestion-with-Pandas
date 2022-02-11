@@ -1,0 +1,20 @@
+#use only the cokumns you want , In thr real world Datasets might have alot of dimension(columns) in the relation databases so you need to reduce the dimension by reducing columns by using usecols params.
+
+ import pandas as pd 
+
+ #make a list of columns you want to use
+
+ cols = ['col1','col2']
+
+ data = pd.read_csv(datafile.csv, usecols=cols )
+
+
+
+
+ #In real world dataset you might have alot of records and so much information so you will need to deal with a certain chunk of your data , you can use skiprows or nrows and list() method 
+
+ first_20_records = pd.read_csv(data.csv)
+
+ col_names = list(first_20_records) // this will get the column names 
+
+ data_50_recods = pd.read_csv(nrows= 50, skiprows = 20 , header= None , names = col_names)
